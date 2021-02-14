@@ -26,17 +26,25 @@ class LinkedList{
         return this;
     }
     middle(){
-        // console.log(this)
+        
         var temp = this.head;
-        console.log(temp)
         var count =0;
-        while(temp.next != null){
+        while(this.length !=0){
             temp = temp.next;
              count++;
+             this.length--;
         }
-        console.log(count)
+        var middleVal = Math.floor(count/2);
+        console.log(middleVal)
 
-        // return count;
+        var counter =0;
+        var currentNode = this.head;
+        while(counter != middleVal){
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode.val;
+         
     }
 
 }
@@ -47,8 +55,7 @@ var list = new LinkedList();
 list.push(99);
 list.push(100);
 list.push(103);
-list.push(105);
-list.push(106);
+
 
 console.log(list)
 
