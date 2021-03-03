@@ -19,6 +19,7 @@ function bubbleSort(arr){
 
 //optimized way:
 function bubble(array){
+
     // console.log(array);
     for(var i=array.length; i>0; i--){
          //console.log(array[i])
